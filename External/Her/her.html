@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Her</title>
+</head>
+<body>
+    <div class="invissible">
+        <h1>Tap anywhere to start the experience!</h1>
+    </div>
+    <div class="main hidden">
+        <audio id="background-audio" src="./Media/Audio/Back.mp3" loop></audio>
+        <h1>Mopriya Biswas</h1>
+        <div class="images">
+            <div class="cutie1">
+                <img src="media/cutie1.jpg" class="cutie">
+            </div>
+            <div class="cutie2">
+                <img src="media/cutie2.jpg">
+            </div>
+            <div class="cutie3">
+                <img src="media/cutie3.jpg">
+            </div>
+            <div class="cutie4">
+                <img src="media/cutie4.jpg">
+            </div>
+            <div class="cutie5">
+                <img src="media/cutie5.jpg">
+            </div>
+            <div class="cutie6">
+                <img src="media/cutie6.jpg">
+            </div>
+        </div>
+        <h2>I think I have no words to describe her, she is perfect ❤️.....</h2>
+    </div>
+</body>
+</html>
+<style>
+    body{
+        background-image:url(./Media/Back.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+    }
+    h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-decoration: underline red;
+    }
+    img{
+        height:40vh;
+        border-radius: 20px;
+        border:2px solid black;
+        box-shadow: 2px 2px 10px black;
+    }
+    .images{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cutie{
+        width:25vw;
+        height: 30vh;
+    }
+    .cutie1{
+        margin-bottom: 50vh;
+    }
+    .cutie2{
+        margin-bottom: 30vh;
+    }
+    .cutie3{
+        margin-bottom: 20vh;
+    }
+    .cutie4{
+        margin-top: -10vh;
+    }
+    .cutie5{
+        margin-top: 0vh;
+    }
+    .cutie6{
+        margin-top: 10vh;
+    }
+    h2{
+        color:cyan;
+    }
+    .invissible {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        z-index: 999;
+    }
+    .hidden {
+        display: none;
+    }
+</style>
+<script>
+    document.addEventListener('click', () => {
+        const audio = document.getElementById('background-audio');
+        const invissible = document.querySelector('.invissible');
+        const main = document.querySelector('.main');
+        audio.play().catch(error => console.error('Audio playback failed:', error));
+        invissible.classList.add('hidden');
+        main.classList.remove('hidden');
+    });
+</script>
